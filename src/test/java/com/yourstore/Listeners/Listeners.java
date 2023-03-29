@@ -16,12 +16,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import com.yourstore.Utilites.ExtentReports;
 
 
 
-public class Listeners extends ExtentReports  implements ITestListener{
-	public WebDriver driver;
+
+public class Listeners extends com.yourstore.Utilites.ExtentRepoters  implements ITestListener{
 	ExtentReports extentReport;
 	ExtentTest extentTest;
 	@Override
@@ -38,10 +37,10 @@ public class Listeners extends ExtentReports  implements ITestListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
+		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String destinationScreenshotPath =System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png";
 		try {
-			org.openqa.selenium.io.FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
+			FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,10 +65,10 @@ public class Listeners extends ExtentReports  implements ITestListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
+		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String destinationScreenshotPath =System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png";
 		try {
-			org.openqa.selenium.io.FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
+			FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -95,10 +94,10 @@ public class Listeners extends ExtentReports  implements ITestListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
+		File scrScreenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String destinationScreenshotPath =System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png";
 		try {
-			org.openqa.selenium.io.FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
+			FileHandler.copy(scrScreenshot, new File(destinationScreenshotPath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -144,7 +143,7 @@ public class Listeners extends ExtentReports  implements ITestListener{
 
 	@Override
 	public void onStart(ITestContext context) {
-	extentReport =Extentreports.genrateExtentReport();
+	extentReport =com.yourstore.Utilites.ExtentRepoters.genrateExtentReport();
 		ITestListener.super.onStart(context);
 	}
 
@@ -163,11 +162,3 @@ public class Listeners extends ExtentReports  implements ITestListener{
 	}
 
 }
-
-
-
-
-
-
-
-	

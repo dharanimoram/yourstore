@@ -6,7 +6,8 @@
 
   <groupId>yourstoreproject1</groupId>
   <artifactId>yourstoreproject1</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.3.28</version>
+  
 
   <name>BlazeclanAutomationFramework</name>
   <!-- FIXME change it to the project's website -->
@@ -43,6 +44,20 @@
       <artifactId>cucumber-testng</artifactId>
       <version>${cucumber-testng-version}</version>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
 
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -57,6 +72,12 @@
       <version>1.18.24</version>
       <scope>provided</scope>
     </dependency>
+    <!--https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+	<groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+	<version>2.41.2</version>
+</dependency>
     <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
     <dependency>
       <groupId>org.jsoup</groupId>
@@ -78,7 +99,12 @@
       <artifactId>selenium-java</artifactId>
       <version>${selenium-java-version}</version>
     </dependency>
-
+<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+  
     <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
     <dependency>
       <groupId>net.masterthought</groupId>

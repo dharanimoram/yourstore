@@ -5,14 +5,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentReports extends com.yourstore.base.BaseClass {
+public class ExtentRepoters extends com.yourstore.base.BaseClass {
 	public static ExtentReports genrateExtentReport()   {
 		ExtentReports extentReport =new ExtentReports();
-		File extentReportFile=new File(System.getProperty("user.dir")+"//test-output/ExtentReports/extentReport.html");
+		File extentReportFile=new File(System.getProperty("user.dir")+".//test-output/ExtentReports/extentReport.html");
 		ExtentHtmlReporter  html=new ExtentHtmlReporter(extentReportFile);
 		html.config().setTheme( Theme.DARK);
 		html.config().setReportName(" Project Test Results");
